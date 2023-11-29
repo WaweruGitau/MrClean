@@ -1,0 +1,19 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>Order List</h1>
+
+    <ul class="list-group">
+      {% for order in orders %}
+        <li class="list-group-item">
+          <a href="{% url 'order_detail' pk=order.pk %}">{{ order.item }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Link to custom CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+{% endblock %}

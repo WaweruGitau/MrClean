@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="mb-4">Order Detail</h1>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Item: {{ order.item }}</h5>
+        <p class="card-text"><strong>Quantity:</strong> {{ order.quantity }}</p>
+        <p class="card-text"><strong>Delivery Date:</strong> {{ order.delivery_date }}</p>
+
+        <!-- Edit and Delete links with Bootstrap buttons -->
+        <a href="{% url 'order_edit' pk=order.pk %}" class="btn btn-success">Edit</a>
+        <a href="{% url 'order_delete' pk=order.pk %}" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

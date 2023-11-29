@@ -1,0 +1,21 @@
+/* clean/static/css/custom.css */
+body {
+    /* Set a background image */
+    background-image: url('../img/img_1.png');
+    /* Additional background styling */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the background covers the whole viewport height */
+}
+
+/* Additional styles for the order list */
+.container {
+    /* Adjust styles as needed */
+    margin-top: 50px;
+}
+
+/* Styles for the list group */
+.list-group-item {
+    /* Add styles for individual list items */
+}
